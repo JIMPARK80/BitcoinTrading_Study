@@ -207,3 +207,82 @@ def bit15():
         print(num)
         num = num + 1
 bit15()
+print("== 1...7 -> output 7 ==") 
+def bit16():
+    num = 1
+    while True:
+        num = num + 1
+        if num >= 7:
+            break
+    print(num)    
+bit16()
+
+# practice03 , define numbers from 1 to 20 and using range print 10 to 20 
+print(" == # practice03 , define numbers from 1 to 20 and using range print 10 to 20  == ")
+def bit17():
+    num_collect = []
+    for num in range(10, 31):
+        # change word "no" instead of number
+        if(num == 15 or num == 20):
+            print("no")
+        else:
+            num_collect.append(num)
+            print(num_collect)  
+bit17()
+
+# Print out the opening year of the World Cup every four years from 2002 to 2050
+print(" ")
+print(" == # Print out the opening year of the World Cup every four years from 2002 to 2050 ===")
+
+def bit18():
+    num_worldCupYear = []
+    for num in range(2002, 2051, 4):
+        num_worldCupYear.append(num)
+    print(num_worldCupYear)    
+bit18()
+
+# function -> def funcntion (input value)
+print(" ")
+print(" ")
+print(" == # function -> def funcntion (input value) ===")
+def bit19(a , b):
+    sum = a + b
+    return sum
+result = bit19(3, 4)
+print(result)
+result = bit19(10, 20)
+print(result)
+
+# The function prints out the price after receiving open, high, low, and close prices.
+print(" ")
+print(" ")
+print(" == # The function prints out the price after receiving open, high, low, and close prices. ==")
+def print_ohlc(open, high, low, close):
+    print("open price: ", open)
+    print("high price: ", high)
+    print("low price: ", low)
+    print("close price: ", close)   
+
+print_ohlc(100, 150, 90, 120)
+
+# Call minimum price
+# define a function for the ticker
+print(" == # Call minimum price ==")
+def get_min_order(ticker):
+    min_order = None
+    if(ticker == "ETH"):
+        min_order = 0.1
+    elif(ticker == "BTC"):
+        min_order = 0.01
+    elif(ticker == "XRP"):
+        min_order = 10
+    else:
+        min_order = 0.005
+    return min_order
+# Call a function about minimum price
+print(" == # Call a function about minimum price ==")
+min_order = get_min_order("BTC")
+print(min_order)      
+    
+
+    
